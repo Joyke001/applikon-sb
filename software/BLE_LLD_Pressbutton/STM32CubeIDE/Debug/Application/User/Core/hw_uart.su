@@ -1,0 +1,8 @@
+hw_uart.c:64:6:MX_UART_Init	24	static
+hw_uart.c:115:6:MX_UART_Deinit	24	static
+hw_uart.c:139:13:HW_UART_Receive_IT	32	static
+hw_uart.c:187:13:HW_UART_Transmit_IT	32	static
+hw_uart.c:235:13:HW_UART_Transmit	32	static
+hw_uart.c:283:13:HW_UART_Transmit_DMA	32	static
+hw_uart.c:383:6:HAL_UART_RxCpltCallback	16	static
+hw_uart.c:412:6:HAL_UART_TxCpltCallback	16	static

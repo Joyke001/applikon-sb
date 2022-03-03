@@ -1,0 +1,71 @@
+\section{Energie verbruik}
+Systemen die werken op batterijen hebben een beperkte tijdsduur en wordt verwacht dat ze worden opgeladen of vervangen zodra ze geen energie meer bevatten. Het streven is om de DO-sensor 28 dagen op een batterij te laten werken. Om dit te kunnen realiseren moet het systeem low power worden gemaakt, waarbij rekening gehouden wordt dat de DO-sensor zelf altijd van spanning voorzien is.
+
+
+\begin{table}[H]
+	\centering
+	\caption{Power budget van de bioreactor module}
+	\label{tab:power_budget_sb}
+	\resizebox{0.5\textwidth}{!}{
+	\begin{tabular}{lllll}
+		\toprule
+		Power Budget & \multicolumn{4}{l}{Maximum Power Consumption}\\ 
+		Components & voltage(V) & current(A) & \makecell[c]{power(Wh)\\28 dagen} & note\\
+		\midrule
+		DO sensor & 2.5 & 680n & 1.14m & \makecell[l]{100\% O2}\\
+		RGB Led & 3.3 & 20m &  1.77 $*$ 2 & \makecell[l]{4\% on\\ 2x aanwezig}\\
+		Microcontroller & 3.3 & \makecell[l]{standby - 200$\micro$ 80\% \\active - 5m 20\%} & 2.57 & ATSAMD21 \\
+		EEram & 3.3 & 200$\micro$ & 443.5$\micro$ & \\
+		Opamp & 3.3 & 1.3m & 2.88 $*$ 2 & \makecell[l]{LMP7716\\ 2 channels}\\
+		ADC & 1.82 & 1m & 1.22 & \\
+		Regulator & 3.7 & 1.6$\micro$ & 3.98m & \\ 
+		SSN & 3.3 & 1$\micro$ & 2.22m & \\
+		Isolation & 3.3 & & & \\
+		\midrule
+		
+		total & & & \makecell[l]{10.22} &  \\
+		\bottomrule
+	\end{tabular} }
+\end{table}
+
+In het power budget, tabel \ref{tab:power_budget_sb}, is het verbruik weergegeven van de huidige smartcable. Voor dit ontwerp was het verbruik van het systeem geen ontwerp criteria, omdat het gevoed wordt vanuit de biocontroller die is aangesloten op het lichtnet. De smartcable bevat verschillende componenten die veel energie verbruiken voor een systeem dat moet gaan werken op een batterij. 
+
+Voor het draadloze smartcable ontwerp worden de componenten onder de loep genomen om het verbruik omlaag te brengen. 
+
+In het power budget zijn er drie componenten waarvan het verbruik ver boven de rest ligt. De componeneten waarover gesproken wordt zijn: de RGB-Leds, de microcontroller en de opamps. Het eerste component dat aangepast zal worden zijn de RGB-led's. Het systeem wordt voorzien van low power led's inplaats van twee RGB-led. 
+
+
+\begin{table}[H]
+	\centering
+	\caption{Power budget van de bioreactor module}
+	\label{tab:power_budget_wisb}
+	\resizebox{0.5\textwidth}{!}{
+	\begin{tabular}{lllll}
+		\toprule
+		Power Budget & \multicolumn{4}{l}{Maximum Power Consumption}\\ 
+		Components & voltage(V) & current(A) & \makecell[c]{power(W)\\28 dagen} & note\\
+		\midrule
+		DO sensor & 2.5 & 680n & 1.14m & \makecell[l]{100\% O2}\\
+		Led & 3.3 & 2m & 177m $*$ 3 & \makecell[l]{4\% on 3x aanwezig}\\
+		Microcontroller & 3.3 & \makecell[l]{standby - 200$\micro$ 80\% \\active - 5m 20\%} & 2.57 & ATSAMD21 \\
+		EEram & 3.3 & 200$\micro$ & 443.5$\micro$ & \\
+		Opamp & 3.3 & 9.5$\micro$ & 21.1m $*$2 & \makecell[l]{LMP2232\\ 2 channels} \\
+		ADC & 1.82 & 1m & 1.22 & \\
+		Regulator & 3.7 & 1.6$\micro$ & 3.98m & \\ 
+		SSN & 3.3 & 1$\micro$ & 2.22m & \\
+		Isolation & 3.3 & & & \\
+		\midrule
+		
+		total & & & \makecell[l]{4.19} &  \\
+		\bottomrule
+	\end{tabular} }
+\end{table}
+
+
+
+Draadloze communicatie gaat ten koste van een hoger stroomverbruik, voornamelijk vanwege het hoge energieverbruik tijdens gegevensoverdracht. 
+
+Het berekenen van de levensduur van de batterij op basis van het gemiddelde stroomverbruik van de sensor is een handige gids, maar het is slechts een deel van het verhaal. De werkelijke levensduur van een knoopcel wordt niet alleen beïnvloed door de grootte van de gemiddelde stroom, maar wordt ook nadelig beïnvloed door piekstroom. Herhaalde stroompieken van meer dan 15 mA verminderen de levensduur van de batterij aanzienlijk.
+
+
+ 

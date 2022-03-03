@@ -1,0 +1,15 @@
+app_ble_lld.c:96:6:APP_BLE_LLD_Init	32	static
+app_ble_lld.c:149:6:APP_BLE_LLD_Error	32	static
+app_ble_lld.c:177:6:CheckWirelessFirmwareInfo	40	static
+app_ble_lld.c:221:6:APP_BLE_LLD_Init_UART	16	static
+app_ble_lld.c:240:6:APP_BLE_LLD_DeInit_UART	8	static
+app_ble_lld.c:247:13:uartRxStart	8	static
+app_ble_lld.c:254:6:APP_BLE_LLD_uartRxStart	16	static
+app_ble_lld.c:260:13:uartRxCpltCallback	8	static
+app_ble_lld.c:268:6:uartWrite	80	static
+app_ble_lld.c:287:6:uartWriteRaw	32	static,ignoring_inline_asm
+app_ble_lld.c:303:13:uartTxSendChunk	16	static
+app_ble_lld.c:325:13:m0CmdProcess	8	static
+app_ble_lld.c:336:6:TL_BLE_LLD_ReceiveM0Cmd	16	static
+app_ble_lld.c:350:9:APP_BLE_LLD_SendCmdM0	24	static
+app_ble_lld.c:371:6:TL_BLE_LLD_ReceiveRsp	16	static

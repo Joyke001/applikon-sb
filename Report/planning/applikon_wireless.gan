@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2022-02-17" view-index="0" gantt-divider-location="382" resource-divider-location="300" version="3.1.3100" locale="en_US">
+    <description/>
+    <view zooming-state="default:2" id="gantt-chart">
+        <field id="tpd3" name="Name" width="201" order="0"/>
+        <field id="tpd4" name="Begin date" width="89" order="1"/>
+        <field id="tpd5" name="End date" width="88" order="2"/>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Name" width="210" order="0"/>
+        <field id="1" name="Default role" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="223" name="PvA" color="#8cb6ce" meeting="false" start="2022-02-07" duration="10" complete="0" thirdDate="2022-02-21" thirdDate-constraint="0" expand="true">
+            <depend id="19" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="0" name="Onderzoek" color="#8cb6ce" meeting="false" start="2022-02-21" duration="12" complete="0" thirdDate="2022-02-10" thirdDate-constraint="0" expand="true">
+            <depend id="4" type="2" difference="0" hardness="Strong"/>
+            <task id="19" name="Smartcable" color="#8cb6ce" meeting="false" start="2022-02-21" duration="2" complete="0" thirdDate="2022-02-21" thirdDate-constraint="0" expand="true">
+                <depend id="17" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="17" name="Draadloze module" color="#8cb6ce" meeting="false" start="2022-02-23" duration="4" complete="0" thirdDate="2022-02-15" thirdDate-constraint="0" expand="true">
+                <depend id="23" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="23" name="Processor" color="#8cb6ce" meeting="false" start="2022-03-01" duration="2" complete="0" thirdDate="2022-03-03" thirdDate-constraint="0" expand="true">
+                <depend id="21" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="21" name="Power supply" color="#8cb6ce" meeting="false" start="2022-03-03" duration="3" complete="0" thirdDate="2022-02-28" thirdDate-constraint="0" expand="true">
+                <depend id="128" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="128" name="Verslag" color="#8cb6ce" meeting="false" start="2022-03-08" duration="1" complete="0" thirdDate="2022-03-04" thirdDate-constraint="0" expand="true">
+                <depend id="25" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="4" name="PCB Ontwerp" color="#8cb6ce" meeting="false" start="2022-03-09" duration="25" complete="0" thirdDate="2022-02-10" thirdDate-constraint="0" expand="true">
+            <depend id="6" type="2" difference="0" hardness="Strong"/>
+            <task id="25" name="Elektrisch schema probe" color="#8cb6ce" meeting="false" start="2022-03-09" duration="7" complete="0" thirdDate="2022-03-04" thirdDate-constraint="0" expand="true">
+                <depend id="75" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="75" name="Elektrisch schema biocontroller" color="#8cb6ce" meeting="false" start="2022-03-18" duration="3" complete="0" thirdDate="2022-03-11" thirdDate-constraint="0" expand="true">
+                <depend id="27" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="27" name="Routen probe" color="#8cb6ce" meeting="false" start="2022-03-23" duration="7" complete="0" thirdDate="2022-03-14" thirdDate-constraint="0" expand="true">
+                <depend id="113" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="113" name="Routen biocontroller" color="#8cb6ce" meeting="false" start="2022-04-01" duration="3" complete="0" thirdDate="2022-03-29" thirdDate-constraint="0" expand="true">
+                <depend id="29" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="29" name="Component selectie" color="#8cb6ce" meeting="false" start="2022-04-06" duration="1" complete="0" thirdDate="2022-03-25" thirdDate-constraint="0" expand="true">
+                <depend id="31" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="31" name="Behuizing" color="#8cb6ce" meeting="false" start="2022-04-07" duration="2" complete="0" thirdDate="2022-03-29" thirdDate-constraint="0" expand="true">
+                <depend id="162" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="162" name="Verslag" color="#8cb6ce" meeting="false" start="2022-04-11" duration="2" complete="0" thirdDate="2022-04-12" thirdDate-constraint="0" expand="true">
+                <depend id="33" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="6" name="Productie en Test" color="#8cb6ce" meeting="false" start="2022-04-13" duration="5" complete="0" thirdDate="2022-02-10" thirdDate-constraint="0" expand="true">
+            <depend id="13" type="2" difference="0" hardness="Strong"/>
+            <task id="33" name="Behuizing" color="#8cb6ce" meeting="false" start="2022-04-13" duration="1" complete="0" thirdDate="2022-03-10" thirdDate-constraint="0" expand="true">
+                <depend id="36" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="36" name="PCB assemblage" color="#8cb6ce" meeting="false" start="2022-04-14" duration="2" complete="0" thirdDate="2022-02-15" thirdDate-constraint="0" expand="true">
+                <depend id="38" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="38" name="PCB functionaliteits test" color="#8cb6ce" meeting="false" start="2022-04-18" duration="1" complete="0" thirdDate="2022-03-10" thirdDate-constraint="0" expand="true">
+                <depend id="185" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="185" name="Verslag" meeting="false" start="2022-04-19" duration="1" complete="0" expand="true">
+                <depend id="40" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="13" name="Software ontwikkeling" color="#8cb6ce" meeting="false" start="2022-04-20" duration="20" complete="0" thirdDate="2022-02-10" thirdDate-constraint="0" expand="true">
+            <depend id="15" type="2" difference="0" hardness="Strong"/>
+            <task id="40" name="Firmware Bioreactor" color="#8cb6ce" meeting="false" start="2022-04-20" duration="13" complete="0" thirdDate="2022-04-06" thirdDate-constraint="0" expand="true">
+                <depend id="42" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="42" name="Firmware Biocontroller" color="#8cb6ce" meeting="false" start="2022-05-09" duration="5" complete="0" thirdDate="2022-04-27" thirdDate-constraint="0" expand="true">
+                <depend id="194" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="194" name="Verslag" color="#8cb6ce" meeting="false" start="2022-05-16" duration="2" complete="0" thirdDate="2022-05-23" thirdDate-constraint="0" expand="true">
+                <depend id="44" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="15" name="Compare Model" color="#8cb6ce" meeting="false" start="2022-05-18" duration="7" complete="0" thirdDate="2022-02-10" thirdDate-constraint="0" expand="true">
+            <task id="44" name="Software compare model" color="#8cb6ce" meeting="false" start="2022-05-18" duration="3" complete="0" thirdDate="2022-05-06" thirdDate-constraint="0" expand="true">
+                <depend id="46" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="46" name="Testopstelling" color="#8cb6ce" meeting="false" start="2022-05-23" duration="1" complete="0" thirdDate="2022-05-13" thirdDate-constraint="0" expand="true">
+                <depend id="48" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="48" name="Testen" color="#8cb6ce" meeting="false" start="2022-05-24" duration="2" complete="0" thirdDate="2022-05-16" thirdDate-constraint="0" expand="true">
+                <depend id="114" type="2" difference="0" hardness="Strong"/>
+                <depend id="206" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="206" name="Verslag" meeting="false" start="2022-05-26" duration="1" complete="0" expand="true"/>
+        </task>
+        <task id="114" name="Report" color="#8cb6ce" meeting="false" start="2022-05-26" duration="7" complete="0" thirdDate="2022-05-27" thirdDate-constraint="0" expand="true">
+            <depend id="210" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="207" name="Compare Model" color="#8cb6ce" meeting="false" start="2022-06-06" duration="6" complete="0" thirdDate="2022-02-14" thirdDate-constraint="0" expand="true">
+            <task id="210" name="Software verfijning" color="#8cb6ce" meeting="false" start="2022-06-06" duration="3" complete="0" thirdDate="2022-06-06" thirdDate-constraint="0" expand="true">
+                <depend id="212" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="212" name="Testen" color="#8cb6ce" meeting="false" start="2022-06-09" duration="2" complete="0" thirdDate="2022-04-04" thirdDate-constraint="0" expand="true">
+                <depend id="216" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="216" name="Verslag" meeting="false" start="2022-06-13" duration="1" complete="0" expand="true"/>
+        </task>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>

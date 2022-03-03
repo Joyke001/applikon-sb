@@ -1,0 +1,114 @@
+Circuit: * C:\Users\moatjon\Documents\applikon\software\simulatie\3orde_butterworth.asc
+
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+Gmin = 0.000142725
+Gmin = 1.5325e-005
+Gmin = 1.6455e-006
+Gmin = 1.76685e-007
+vernier = 0.5
+vernier = 0.25
+Gmin = 6.05449e-008
+vernier = 0.125
+vernier = 0.0625
+Gmin = 5.51291e-008
+vernier = 0.0833333
+vernier = 0.111111
+vernier = 0.0555555
+vernier = 0.0277778
+Gmin = 4.79643e-008
+vernier = 0.037037
+Gmin = 4.42463e-008
+vernier = 0.0493827
+vernier = 0.0658435
+Gmin = 3.87819e-008
+vernier = 0.0329218
+vernier = 0.0164609
+vernier = 0.0219478
+Gmin = 3.79903e-008
+vernier = 0.0292638
+vernier = 0.0390184
+Gmin = 3.54269e-008
+vernier = 0.0520245
+vernier = 0.0260122
+vernier = 0.0130061
+vernier = 0.00650306
+vernier = 0.00325153
+Gmin = 3.37485e-008
+vernier = 0.00433537
+Gmin = 3.34301e-008
+vernier = 0.00578049
+vernier = 0.00770732
+Gmin = 3.29152e-008
+vernier = 0.0102764
+vernier = 0.0137019
+Gmin = 3.21157e-008
+vernier = 0.0182692
+Gmin = 3.086e-008
+vernier = 0.0243589
+vernier = 0.0324786
+Gmin = 2.89109e-008
+vernier = 0.0433047
+vernier = 0.0216524
+Gmin = 2.74664e-008
+vernier = 0.0288698
+vernier = 0.0384931
+vernier = 0.0192465
+vernier = 0.00962327
+Gmin = 2.62433e-008
+vernier = 0.012831
+Gmin = 2.54976e-008
+vernier = 0.017108
+vernier = 0.0228107
+Gmin = 2.42941e-008
+vernier = 0.0304143
+vernier = 0.0405523
+Gmin = 2.24937e-008
+vernier = 0.0540698
+Gmin = 1.9932e-008
+vernier = 0.072093
+vernier = 0.096124
+Gmin = 1.62837e-008
+vernier = 0.128165
+vernier = 0.170887
+Gmin = 1.18197e-008
+vernier = 0.227849
+Gmin = 7.17094e-009
+vernier = 0.303799
+vernier = 0.405065
+Gmin = 3.14235e-009
+vernier = 0.540087
+vernier = 0.720115
+Gmin = 8.70282e-010
+vernier = 0.960154
+Gmin = 1.23446e-010
+vernier = 1
+Gmin = 1.3255e-011
+Gmin = 1.42324e-012
+Gmin = 1.52819e-013
+Gmin = 0
+Gmin stepping succeeded in finding the operating point.
+
+
+Date: Tue Mar 01 16:10:54 2022
+Total elapsed time: 0.098 seconds.
+
+tnom = 27
+temp = 27
+method = trap
+totiter = 2587
+traniter = 0
+tranpoints = 0
+accept = 0
+rejected = 0
+matrix size = 19
+fillins = 12
+solver = Normal
+Matrix Compiler1:      72 opcodes
+Matrix Compiler2: off  [0.1]/0.2/0.4
+

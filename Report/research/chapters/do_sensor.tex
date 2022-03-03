@@ -1,0 +1,59 @@
+\section{Polarographic DO Sensor}
+De DO metingen worden gedaan aan de hand van een polarographic sonde van Metroglass. Polarografische meting met membraan bedekte sondes is de meest gebruikte methode om zuurstof in een vloeistof te meten. Polarografische DO-sensoren zijn een typen elektrochemische sensoren voor opgeloste zuurstof. In een elektrochemische DO-sensor verspreid de zuurstof uit het monster over een zuurstofdoorlatend membraan in de sensor. Eenmaal in de sensor ondergaat de zuurstof een chemische reductiereactie, die een elektrisch signaal produceert. De gemeten reductiestroom is evenredig aan de partiële zuurstofdruk in het medium van het membraan. Dit signaal kan worden afgelezen om de opgeloste zuurstof in de vloeistof te bepalen.
+
+Wanneer een negatief elektrisch potentiaal die voldoende hoog is ten opzichte van een referentie-elektrode wordt toegepast op een kathode, wordt opgeloste zuurstof gereduceerd aan het kathodeoppervlak\cite{hamilton_do}. Voor een probe met een platinum/zilver elektrode combinatie ligt de polarisatie spanning rond de -800mV en -500mV. De reactie die de kathode aangaat met de zuurstof is te zien in reactievergelijking \ref{eq:cathode_do_1} en \ref{eq:cathode_do_2}\cite{linek_covered_probes}.
+
+\begin{equation}\label{eq:cathode_do_1}
+	O_{2} + 2e^{–} + 2H_{2}O \rightarrow H_{2}O_{2} + 2OH^{–}
+\end{equation}
+\begin{equation}\label{eq:cathode_do_2}
+	H_{2}O_{2} + 2e^{–} \rightarrow  2OH^{-}
+\end{equation}
+
+Als gevolg van de reactie tussen de zuurstof en de sonde is er een daling van de zuurstofconcentratie rond het membraan in vergelijking met het externe medium. De snelheid van de zuurstofreductie hangt af van de partiële druk door het membraan in de meetkamer van de sonde waar de zuurstof gereduceerd wordt tot
+hydroxide-ionen (OH-)\cite{mt_do_measurement}. De elektronenstroom van de anode naar de kathode vertegenwoordigt het meetsignaal.
+
+Volgens de gaswet van Henry is bij een evenwichtssituatie tussen de vloeistof en het gas de concentratie van de gasmoleculen in de vloeistof recht evenredig aan de partiële druk. De formule van de wet van Henry is uitgeschreven in formule \ref{eq:henry}. In deze formule is C de concentratie van gasmoleculen in de vloeistof, H de Henry-constante en p$_g$ de partiële druk van de gas \cite{henry}.
+
+\begin{equation}\label{eq:henry}
+	C = H*p_g
+\end{equation}	
+
+De recht evenredigheid tussen de stroom en de partiële zuurstofdruk p$(O_2)$ kan worden gebruikt om de zuurstof concentratie te bepalen. 
+
+\subsection{DO smartcable}
+Voor het uitlezen en verwerken van de polarographic DO-sensor meting is er door Getinge Applikon een systeem ontworpen die de analoge meetwaardes digitaliseert en verwerkt tot een DO percentage. Dit systeem wordt de smartcable genoemd. De smartcable wordt gemonteerd op de DO-sensor en kan via een kabel worden verbonden met de biocontroller, wat de processen regelt in de bioreactor aan de hand van de sensor data. 
+
+De smartcable bevat een processor om de DO-sensor waarde via de ADC te kunnen aflezen en eens in de x seconde door te sturen naar de biocontroller. 
+
+%Wanneer een negatieve potentiaal die voldoende hoog is ten opzichte van een referentie-elektrode wordt toegepast op een edelmetaalelektrode, dit werkt als kathode, wordt opgeloste zuurstof gereduceerd aan het kathodeoppervlak\cite{hamilton_do}. In een polarogram wordt de stroom uitzet tegen de partiële druk, dit geeft de concentratie en aard van ionen in een oplossing weer. De stroom M die tussen de elektroden vloeit als functie van het aangelegde potentiaal, U, wordt bepaald door twee opeenvolgende processen. Het eerste proces is de snelheid van het zuurstoftransport naar het kathodeoppervlak en het tweede proces is de algehele stoichiometrie, de verhouding waarin samengestelde stoffen met elkaar reageren, van de kathodische reductie van zuurstof\cite{stoichiometrie}.
+
+%Een zilver/zilverchloride tegenelektrode, de anode, maakt de benodigde elektronen vrij:
+%
+%\begin{equation}
+%	4Ag \rightarrow 4Ag^{+} + 4e^{–}
+%\end{equation} 
+%
+%\begin{equation}
+%	4Ag^{+} + 4Cl^{–} \rightarrow 4AgC
+%\end{equation}
+%
+%Aan de anode zal zilver worden geoxideerd en in aanwezigheid van chloride zal het onoplosbare AgCl neerslaan op de elektrode. Deze afzettingen moeten regelmatig worden verwijderd zodat er een constante stroom in de sensor is.
+%Cathode:\\
+%\begin{equation}
+%	O_{2} + 2e^{–} + 2H_{2}O \rightarrow H_{2}O_{2} + 2OH^{–}
+%\end{equation}
+%
+%
+%\begin{equation}
+%	H_{2}O_{2} + 2e^{–} \rightarrow  2OH^{-}
+%\end{equation}
+%
+%Anode: \\
+%\begin{equation}
+%	4Ag \rightarrow 4Ag^{+} + 4e^{–}
+%\end{equation} 
+%
+%\begin{equation}
+%	4Ag^{+} + 4Cl^{–} \rightarrow 4AgC
+%\end{equation}

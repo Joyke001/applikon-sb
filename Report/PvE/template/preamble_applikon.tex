@@ -1,0 +1,138 @@
+\usepackage[toc]{appendix}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[dutch]{babel}
+\usepackage{blindtext}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{cite}
+\usepackage{colortbl} 
+\usepackage[official]{eurosym}
+\usepackage{eso-pic}  
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage{tablefootnote}
+\usepackage{graphicx}
+\usepackage[a4paper]{geometry}
+\usepackage{gensymb}
+%\usepackage{lipsum} use blindtext instead
+\usepackage{makecell}
+\usepackage{pdfpages}
+\usepackage{parskip}
+\usepackage{siunitx}
+\usepackage{tikz}
+\usetikzlibrary{math}
+\usepackage{titling}
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{xfrac}
+\usepackage{wrapfig}
+
+\definecolor{HHS_GREEN}{RGB}{166,188,10}
+\definecolor{HHS_GRAY}{RGB}{30,48,62}
+\definecolor{HHS_LIGHT}{RGB}{130,148,162}
+
+\definecolor{APPL_DARK}{RGB}{35,31,32}
+\definecolor{APPL_BLUE}{RGB}{0,170,182}
+
+\colorlet{APPL_DARKBLUE}{APPL_BLUE!50!APPL_DARK}
+\colorlet{APPL_DARKDARKBLUE}{APPL_BLUE!40!APPL_DARK}
+
+\renewcommand{\rmdefault}{ptm}
+\rmfamily
+
+\titleformat{\section}[hang]{\LARGE\normalfont\sffamily\color{APPL_DARKBLUE}}{\thesection}{1em}{}
+\titleformat{\subsection}[hang]{\Large\normalfont\sffamily\color{HHS_GRAY}}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}[hang]{\large\normalfont\sffamily\color{HHS_GRAY}}{\thesubsubsection}{1em}{}
+
+
+\titlecontents{section}[0em]{\vskip6pt\normalsize\sffamily\color{APPL_DARKBLUE}}{\thecontentslabel\enspace}{\hspace{1.05em}}{ \hfill\contentspage}[\vskip 3pt]
+\titlecontents{subsection}[1em]{\vskip6pt\small\sffamily\color{APPL_DARKDARKBLUE}}{\thecontentslabel\enspace}{\hspace{1.05em}}{ \hfill\contentspage}[\vskip 2pt]
+\titlecontents{subsubsection}[2em]{\vskip6pt\footnotesize\sffamily\color{APPL_DARKDARKBLUE}}{\thecontentslabel\enspace}{\hspace{1.05em}}{ \hfill\contentspage}[\vskip 1pt]
+
+
+
+\newcommand{\subtitle}[1]{%
+	\posttitle{%
+		\par\end{center}
+	\begin{center}\large#1\end{center}
+	\vskip0.5em}%
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{7pt}
+
+\newcommand{\hhslogox}{25}
+\newcommand{\hhslogoy}{775}
+\newcommand{\graybandheight}{1.5}
+\newcommand{\graybandwidth}{7.5}
+
+\tikzmath{
+	\graybandindented = \graybandwidth - 1;
+}
+
+
+\setlength{\headheight}{0pt} % fixes \headheight warning
+\fancypagestyle{default}{%
+	\newgeometry{top=3cm,bottom=2.5cm,right=2cm,left=2cm}
+	\fancyhead{}
+	\renewcommand{\headrulewidth}{0pt}
+	
+	
+	\ClearShipoutPicture
+	\AddToShipoutPicture
+	{
+		\put(57, 788){\begin{tikzpicture}
+			\draw [fill=APPL_BLUE, draw=APPL_BLUE] (0.0,0.0) rectangle (13.5,0.85);
+			\end{tikzpicture}
+		}
+		\put(425, 788){\begin{tikzpicture}
+			\draw [fill=APPL_DARK, draw=APPL_DARK] (0.0,0.0) rectangle (4.1,0.85);
+			\end{tikzpicture}
+		}
+		\put(396.5, 775){\begin{tikzpicture}
+			\draw [fill=white, draw=white] (0.0,0.0) circle (0.9);
+		\end{tikzpicture}
+	}
+		
+		\put(410,788.5){\includegraphics[scale=0.2]{"./graphics/applikon_small"}}
+		\put(60,804){\textcolor{white}{\scriptsize{\fontfamily{qag}\selectfont\textbf{Plan van Aanpak} }}}
+		\put(60,791){\textcolor{white}{\scriptsize{\fontfamily{qag}\selectfont{\textbf{Wireless Bioreactor Probe}}}}}
+		
+		\put(492,804){\textcolor{white}{\scriptsize{\fontfamily{qag}\selectfont \textbf{Joyke Elbers} }}}
+		\put(472,791){\textcolor{white}{\scriptsize{\fontfamily{qag}\selectfont  \textbf{Applikon Getinge}}}}
+	}
+}
+
+\setlength{\headheight}{0pt} % fixes \headheight warning
+\fancypagestyle{frontpage}{%
+	\newgeometry{top=2cm,bottom=2cm,right=2cm,left=2cm}
+	\fancyhead{}
+	\renewcommand{\headrulewidth}{0pt}
+	 
+	%OLD = 346 / 194
+	
+	\ClearShipoutPicture
+	\AddToShipoutPicture
+	{
+		%\put(95,650){\includegraphics[scale=0.322]{"./graphics/qing_logo"}}
+		\put(400,40){\includegraphics[scale=0.6]{"./graphics/thuas_logo_black"}}
+		\put(50,65){\textcolor{black}{\normalsize{\fontfamily{ptm}\sffamily\selectfont The Hague University of Applied Sciences}}}
+		\put(50,50){\textcolor{black}{\normalsize{\fontfamily{ptm}\sffamily\selectfont Faculty of Technology, Innovation and Society (TIS)}}}
+		\put(50,35){\textcolor{black}{\normalsize{\fontfamily{ptm}\sffamily\selectfont Bedrijfsproject Mythronics}}}
+	}
+}
+
+\setlength{\headheight}{0pt} % fixes \headheight warning
+\fancypagestyle{plain}{%
+	\newgeometry{top=8cm,bottom=2.5cm,right=2cm,left=2cm}
+	\fancyhead{}
+	\renewcommand{\headrulewidth}{0pt}
+}
+
+

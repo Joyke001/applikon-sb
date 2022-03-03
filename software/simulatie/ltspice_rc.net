@@ -1,0 +1,22 @@
+* C:\Users\moatjon\Documents\applikon\software\simulatie\ltspice_rc.asc
+V2 2VDC5 0 2.5
+V1 3V3 0 3.3
+R1 N002 N001 2Meg tol=0.1 pwr=0.25
+R2 N001 Iin 10k
+C1 N001 0 10n V=10
+R3 Vout N002 10k tol=1 pwr=0.25
+C2 Vout 0 10µ V=10
+V3 1V8195 0 1.8195
+V4 Vres 0 1Meg
+XU4 1V8195 N001 3V3 0 N002 LTC6241
+V§AC2 2V5 0 AC AC 1
+I§AC1 0 Iin SINE(345 335 1k) AC AC
+* Fc = 1.5kHz
+* Fc = 1.6Hz
+* A = -2M
+* V(DO) = 1.82 - I(in) * 2M
+* DO_res
+.ac dec 1000 100m 100Meg
+.lib LTC4.lib
+.backanno
+.end

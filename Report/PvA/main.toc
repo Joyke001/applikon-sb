@@ -1,0 +1,13 @@
+\babel@toc {dutch}{}\relax 
+\contentsline {section}{\numberline {1}Elektronisch Ontwerp AGV-module}{1}{}%
+\contentsline {subsection}{\numberline {1.1}Microcontroller}{1}{}%
+\contentsline {subsection}{\numberline {1.2}Telemetriesysteem}{2}{}%
+\contentsline {subsubsection}{\numberline {1.2.1}Bluetooth}{2}{}%
+\contentsline {subsubsection}{\numberline {1.2.2}Wi-Fi}{2}{}%
+\contentsline {subsubsection}{\numberline {1.2.3}Xbee}{2}{}%
+\contentsline {subsubsection}{\numberline {1.2.4}Afweging}{2}{}%
+\contentsline {subsection}{\numberline {1.3}USB-interface}{2}{}%
+\contentsline {subsection}{\numberline {1.4}Stroomvoorziening}{3}{}%
+\contentsline {subsection}{\numberline {1.5}Battery Management System}{3}{}%
+\contentsline {subsection}{\numberline {1.6}Accu}{4}{}%
+\contentsfinish 

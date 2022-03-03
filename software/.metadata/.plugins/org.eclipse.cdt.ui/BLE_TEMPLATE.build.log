@@ -1,0 +1,10 @@
+20:48:45 **** Incremental Build of configuration Debug for project BLE_TEMPLATE ****
+make -j8 all 
+arm-none-eabi-size   BLE_TEMPLATE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  47240	    502	   9870	  57612	   e10c	BLE_TEMPLATE.elf
+Finished building: default.size.stdout
+ 
+
+20:48:45 Build Finished. 0 errors, 0 warnings. (took 760ms)
+

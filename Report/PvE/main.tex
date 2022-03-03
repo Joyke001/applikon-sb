@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\input{"./template/preamble_applikon"}
+\newcommand{\cmark}{\ding{51}}
+\newcommand{\xmark}{\ding{55}}
+\newlist{abbrv}{itemize}{10}
+\setlist[abbrv,1]{label=,labelwidth=1in,align=parleft,itemsep=0.1\baselineskip,leftmargin=!}
+
+\newcommand{\tabshade}{black!8}
+
+\begin{document}
+	\begin{titlepage}
+		\centering
+		\vspace{5cm}
+		{\scshape\LARGE Programma van eisen \par}
+		{\scshape\large Wireless Bioreactor Probe\par}
+		
+		
+		\vspace{1.2cm}
+		{J.H. Elbers\\}
+		{BSc Mechatronica \\}
+		{\today}
+		\vfill
+		\vfill
+
+	\begin{tabular}{p{4cm}l} 
+		Bedrijfsmentor &  \\
+		A. Kaljouw & Applikon Getinge, Delft \\
+		
+		\medskip
+		Stagebegeleider & \\ 
+		X. van Rijnsoever & De Haagse Hogeschool, Delft \\
+		
+		
+	\end{tabular}
+
+\textit{}
+
+\end{titlepage} 
+\rmfamily
+\pagestyle{default}
+\pagenumbering{roman}
+
+
+\newpage
+
+\pagenumbering{arabic}
+
+\input{./chapters/project}
+
+\input{./chapters/programmaVanEisen}
+
+
+\renewcommand\refname{Literatuurlijst}
+\bibliographystyle{IEEEtran}
+\bibliography{./references.bib}
+
+
+
+
+\end{document}

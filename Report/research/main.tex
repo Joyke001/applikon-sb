@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{multicol}
+\input{"./template/preamble_applikon"}
+\newcommand{\cmark}{\ding{51}}
+\newcommand{\xmark}{\ding{55}}
+\newlist{abbrv}{itemize}{10}
+\setlist[abbrv,1]{label=,labelwidth=1in,align=parleft,itemsep=0.1\baselineskip,leftmargin=!}
+
+\newcommand{\tabshade}{black!8}
+
+\begin{document}
+	\begin{titlepage}
+		\centering
+		\vspace{5cm}
+		{\scshape\LARGE Onderzoek \par}
+		{\scshape\large Kost-Efficient, Low Power, Wireless Dissolved Oxygen Sensor Voor Een Bioreactor\par}
+		{\scshape\large Vertrouwelijk Document\par}
+		
+		
+		\vspace{1.2cm}
+		{J.H. Elbers\\}
+		{BSc Mechatronica \\}
+		{\today}
+		\vfill
+		\vfill
+
+	\begin{tabular}{p{4cm}l} 
+		Bedrijfsmentor &  \\
+		A. Kaljouw & Applikon Getinge, Delft \\
+		
+		\medskip
+		Stagebegeleider & \\ 
+		X. van Rijnsoever & De Haagse Hogeschool, Delft \\
+		
+		
+	\end{tabular}
+
+\textit{}
+
+\end{titlepage} 
+\rmfamily
+\pagestyle{default}
+\pagenumbering{roman}
+
+
+\newpage
+\begin{multicols}{2}
+
+\pagenumbering{arabic}
+
+\input{./chapters/inleiding}
+
+\input{./chapters/do_sensor}
+
+\input{./chapters/accu}
+
+\input{./chapters/onderzoek}
+
+\input{./chapters/filter}
+
+
+
+\end{multicols}
+\renewcommand\refname{Literatuurlijst}
+\bibliographystyle{IEEEtran}
+\bibliography{./references.bib}
+
+\newpage
+\input{./chapters/appendices}
+
+
+\end{document}

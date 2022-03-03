@@ -1,0 +1,71 @@
+\section{Projectactiviteiten}\label{sec:activiteiten}
+Deze stageopdracht bestaat uit de volgende deelopdrachten:\\
+•	Het onderzoeken van geschikte draadloze communicatiemethoden.\\
+•	Het ontwikkelen van de benodigde elektronica om de sensoren draadloos aan de biocontroller te koppelen.\\
+•	De ontwikkeling van de benodigde software voor eventuele microcontrollers en processen op de biocontroller.\\
+•	De ontwikkeling van een behuizing die de elektronica koppelt aan de probe.\\
+•	Het ontwikkelen van een model om de prestaties van een draadloze sensor met een kabelsensor te vergelijken.\\
+
+
+In het project zijn de activiteiten die ondernomen worden onderverdeeld in verschillende fases; Inlezen en onderzoek, Ontwerp, Realisatie en testen, Coderen en Concepttest.
+
+Het project begint met een gedeelte onderzoek waar gekeken wordt naar de manieren van draadloze communicatie. Aan de hand van het onderzoek wordt een keuze gemaakt voor een draadloze module. Ook zal er grondig naar de bestaande bedrade module gekeken worden zodat dit geïntegreerd kan worden. Om een passende power supply te kunnen selecteren zal er gekeken worden naar het verbruik van de bioreactor module en de manieren om het dit te minimaliseren. 
+
+Als alle subsystemen theoretisch zijn uitgewerkt en op papier zijn gezet kan het elektrisch circuit ontworpen worden. Zodra de schema's zijn goedgekeurd wordt de printplaat geroute waarna deze geproduceerd kan worden. Het elektrisch schema en de printplaat wordt ontworpen in het programma PADS. 
+
+In de tijd dat de printplaat wordt geproduceerd kan de behuizing voor de modules worden gemaakt, dit wordt gedaan in Inventor. De behuizing kan vervolgens worden ge-3D print.
+
+Na de productie en assemblage van de printplaat moet er getest worden of het werkt naar behoren. Van elk subsysteem wordt de functionaliteit getest en zo nodig worden er aanpassingen gemaakt. 
+
+Naast de hardware is er ook software nodig voor het systeem. De firmware voor de module zal geschreven worden in C++. De benodige software om een test model te maken waar een bedrade en draadloze sensoren wordt vergeleken zal geschreven worden in Python. 
+
+Zodra de hardware en software klaar zijn voor gebruik kan het totale systeem getest worden. Hieruit komt een conclusie voor de proof of concept. 
+
+In tabel \ref{tab:activiteiten} is een overzicht gemaakt van de verwachte activiteiten. 
+
+
+\begin{table}[H]
+	\centering
+	\caption{Projectactiviteiten}
+	\label{tab:activiteiten}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{lll}
+		\toprule
+		Fase & activiteit & omschrijving   \\ 
+		\midrule
+		Inlezen en onderzoek & Draadloze module & \multicolumn{1}{l}{Wat zijn de mogelijkheden en wat past het beste bij dit project.} \\
+		 & Smartcable & \multicolumn{1}{l}{Hoe zit de bestaande smartcable in elkaar en hoe werkt het.} \\
+		 &  & \multicolumn{1}{l}{Wat zijn de aanbevelingen voor de huidige smartcable.} \\
+		 &  & \multicolumn{1}{l}{Hoe kan de module low power worden gemaakt.} \\
+		 & Power supply & \multicolumn{1}{l}{Is een batterij geschikt voor de module en hoelang kan het mee.} \\
+		 & Processor & \multicolumn{1}{l}{Wat voor processor is geschikt voor beide modules.} \\
+		 \midrule
+		 
+		 Ontwerp & Circuitry & Elektrisch ontwerp van de probe module. \\
+		 & & Elektrisch ontwerp van de biocontroller module. \\
+		 & PCB routing & PCB ontwerp van probe module. \\
+		 & &  PCB ontwerp van biocontroller module. \\
+		 & Componenten selecteren & \makecell[l]{Alle componenten moeten worden uitgekozen en besteld van \\een microcontoroller tot en met de weerstanden.}\\
+		 & Behuizing ontwerp & Behuizing ontwerp probe module. \\ 
+		 & & Behuizing ontwerp biocontroller module. \\
+		 \midrule
+		 
+		 Realisatie en testen & PCB productie & PCB produceren en assembleren.\\
+		 & PCB test & PCB functionaliteitstest van componenten en subsystemen.\\
+		 & \makecell[l]{Behuizing \\ontwikkelen} & Behuizingen produceren en gebruik klaar maken.\\
+		  \midrule
+		  
+		 Coderen &\makecell[l]{ Firmware Bioreactor\\ module} & meting opvragen en dataverwerking. \\
+		 & & Encrypte van de data voor veilige draadloze communicatie. \\
+		 & & Data versturen en ontvangen.\\
+		 & \makecell[l]{Firmware biocontroller\\ module} & Data ontvangen en sturen. \\
+		 & & Data verwerken en formatteren. \\
+		 & \makecell[l]{Software Compare\\ Model} &\makecell[l]{Software voor een model voor het testen van de betrouwbaarheid\\ van de draadloze sensor in vergelijking tot een bedrade sensor.} \\
+		  \midrule
+		  
+		 Concepttest & Testopstelling & Testopstelling voor de proof of concept realiseren.\\
+		 & Testen &\makecell[l]{Het testen van de modules in de proof of concept opstelling en dit\\ meerdere malen herhalen.} \\ 
+		 		 
+		\bottomrule
+	\end{tabular}}
+\end{table} 

@@ -1,0 +1,27 @@
+* C:\Users\moatjon\Documents\applikon\software\simulatie\do_butterworth.asc
+V2 3V3 0 3.3
+R1 N002 N001 2Meg tol=0.1 pwr=0.25
+R2 N001 2V5 10k
+C1 N001 0 10n V=10
+V3 1V8195 0 1.8195
+XU1 1V8195 N001 3V3 0 N002 LTC6241
+V§AC1 2V5 0 SINE(1 1 1k) AC AC 1
+XU2 N005 N004 3V3 0 N004 LTC6241
+R4 N003 N005 10k
+R5 N002 N003 10k
+C3 N005 0 10µ
+C4 N004 N003 10µ
+R6 Vout N004 10k
+C5 Vout 0 10µ
+* Fc = 1.5kHz
+* A = -2M
+* V(DO) = 1.82 - I(in) * 2M
+.ac dec 1000 10m 100Meg
+* Second Order
+* First Order
+* Third Order
+* fc = 1/ (2*pi* RC) [Hz]
+* Fc = 1.6Hz
+.lib LTC4.lib
+.backanno
+.end

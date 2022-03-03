@@ -1,0 +1,111 @@
+\section{Telemetriesysteem}
+Om draadloos te kunnen communiceren tussen de bioreactor en de biocontroller is een telemetriesysteem nodig. Om te kunnen bepalen welke technologie het beste past voor het project is er onderzoek gedaan naar de verschillende manieren van draadloze communicatie.
+
+Het telemetriesysteem wordt gere-integreerd in de DO probe om data te kunnen versturen naar een transceiver in de biocontroller. De twee systemen bevinden zicht, in een doorsnede opstelling, in een straal 10 meter van elkaar vandaan. De biocontrollen wordt voorzien van een transceiver module die de data kan ontvangen van meerdere probes. In een bioreactor kunnen meerdere sensoren worden geplaatst zoals pH, temperatuur en dO. Het is de bedoeling dat zodra de dO probe betrouwbaar en veilig draadloos zijn data kan versturen gevoed op een batterij dat dit ook wordt gedaan bij andere sensoren voor de bioreactor. De afstand tussen de sensoren is een paar centimeter. Ook moet er rekening gehouden worden er een bepaalde datarate. Tijdens het onderzoek zal met boven genoemde punten rekening gehouden worden voor het bepalen van de beste communicatie methode. 
+
+De hoeveelheid stroom die wordt verbruikt, die sterk afhankelijk is van het bereik en de zuiverheid van de gegevensuitwisseling, is een belangrijk aandachtspunt geweest voor hardwareontwerpers om op rootniveau in hun ontwerpen op te nemen.
+
+\subsection{Bluetooth / Bluetooth low energy}
+Bluetooth is een methode om draadloos gegevens uit te wisselen tussen twee of meer apparaten, dit gebeurt met radiogolven bij een frequentie tussen 2.4GHz en 2.483GHz. Deze frequentie-band is een de frequenties die internationaal worden gebruikt voor de in de industrie, scientific en medische systemen(ISM). Aan de hand van dit netwerk kan er in een straal van 10-50 meter gecommuniceerd worden tussen systemen die mee doen in het netwerk. Voor Bluetooth wordt er gebruik gemaakt van IEEE 802.15.1 protocol waar een netwerk kan bestaan uit een Personal Area Network(PAN) of een Piconet. Bij een Piconet netwerk kan zijn er minimaal twee en maximaal acht bluetooth apparaten aanwezig. Elk apparaat biedt een uniek 48-bits adres van de IEEE 802-standaard(Institute of Electrical and Electronic Engineers), waarbij er een point-to-point of multipoint verbinding tot stand wordt gebracht.\cite{wireless_types}
+
+Bij het overwegen tussen Bluetooth en Bluetooth Low Energy, is het belangrijk om te praten over stroomverbruik. Bluetooth is oorspronkelijk ontworpen voor een continu data stream toepassingen. Dat betekent dat je op korte afstand veel data kunt uitwisselen.
+
+Als we het hebben over Bluetooth Low Energy versus Bluetooth, is het belangrijkste verschil het lage energieverbruik van Bluetooth LE. Met een laag energieverbruik kunnen applicaties langer op een kleine batterij werken. Hoewel dit niet ideaal is om te telefoneren, is het van vitaal belang voor toepassingen die periodiek kleine hoeveelheden gegevens uitwisselen.
+
+40 channels with 2 MHz spacing (3 advertising channels/37 data channels)
+
+
+\subsection{Wi-Fi}
+WiFi is een directe vervanging voor een bekabelde Ethernet-kabel en wordt in dezelfde situaties gebruikt om te voorkomen dat overal draden lopen. Het voordeel van WiFi is dat het verbinding kan maken met een bestaande netwerk-hub of router, wat betekent dat er geen pc aan hoeft te staan om toegang te krijgen tot een apparaat via wifi. Voor wifi wordt net als Bluetooth een IEEE 802.11 protocol gebruikt om te communiceren. In theorie kan met Wi-Fi in het 2,4 GHz-netwerk tot 11 Mbit/s worden overgedragen met een maximaal zendvermogen van 20 dBm.
+
+
+\subsection{ZigBee-module}
+XBee is een door Digi International geproduceerde module die voornamelijk wordt gebruikt als zendontvanger en ontvanger voor radiocommunicatie. Het protocol ondersteunt zowel peer-to-peer als point-to-multipoint netwerkcommunicatie draadloos met een snelheid van 250 kbits/s. XBee is een verzameling van draadloze communicatiemodules die gebruik maken van de IEEE 802.15.4 standaard. Deze modules zijn in staat om onderling een netwerk op te stellen en te communiceren via een routing-methode vergelijkbaar met IP-routers. Een voorbeeld van een XBee module is de XB3-24DMUM-J van Digi International. Deze module heeft met een zendvermogen van 8 dBm een maximaal bereik tot 1200 m in line-of-sight configuratie en een maximaal bereik tot 60 m in een binnenomgeving. Het maximale stroomverbruik bij het zenden op dit vermogen is 40 mA op 3.3 V.
+
+\subsection{2.4 GHz-module}
+Ook biedt de nRF24L01+ een van de nRF24 modules een functie genaamd Multiceiver. Het is een afkorting voor Multiple Transmitters Single Receiver. De nRF24L01 is een draadloze transceivermodule, de module werkt net als Bluetooth en Wi-Fi bij een frequentie van 2,4 GHz, die onder de ISM-band valt. De modules kunnen bij efficiënt gebruik een afstand van 800 meter overbruggen\cite{nordic_nrf24}. 
+
+nRF24 IC's gebruiken het Enhanced ShockBurst protocol (ESB) van Nordic Semiconductor, dit maakt low power communicatie en hoge prestaties mogelijk. Deze module heeft net als Bluetooth en Wi-Fi een maximaal zendvermogen van 20 dBm en verbruikt met zenden maximaal 12 mA bij een spanning van 3.3 V, en heeft een maximale communicatiesnelheid van 2 Mb/s\cite{digikey_lp_wireless}.
+
+
+\subsection{LoRa}
+LoRa maakt langeafstandstransmissies mogelijk met een laag stroomverbruik. De technologie dekt de fysieke laag, terwijl andere technologieën en protocollen zoals LoRaWAN (Long Range Wide Area Network) de bovenste lagen afdekken. Het kan datasnelheden halen tussen 0,3 kbit/s en 27 kbit/s, In Europa is deze frequentie 868 MHz. Volgens de LoRa Development Portal kan het bereik van LoRa tot drie mijl (vijf kilometer). \cite{rf_lora}
+
+
+\subsection{Infra-red}
+Infraroodcommunicatie is een eenvoudige draadloze communicatiemethoden en is een kosteneffectieve manier om beperkte hoeveelheden gegevens draadloos te verzenden. De golflengte van infrarood licht varieert tussen de 300 tot 430THz. Dit zijn ongeleide optische signalen zoals lasers en zijn unidirectional. IR light-emitting diodes (LED) worden gebruikt om IR-signalen te verzenden, de LED wordt snel in- en uitgeschakeld voor gegevenscodering\cite{techopedia_ir}. 
+
+De het licht van de LED worden ontvangen door een Infrared Data Association apparaat, IrDA, dat is uitgerust met een siliciumfotodiode. Deze ontvanger zet de IR-pulsen om in een elektrische stroom voor verwerking. Omdat IR licht van een natuurlijke bron een lagere frequentie heeft dan een snel pulserend IrDA-signaal, kan de siliciumfotodiode het IrDA-signaal uit omgevings-IR filteren.
+
+Een verbinding vindt altijd één op één plaats, meer dan twee apparaten kunnen niet gelijktijdig communiceren.
+
+\subsection{Afweging}
+\begin{table}[H]
+	\centering
+	\caption{Wireless module afwegingstabel}
+	\label{tab:wisb_afweging}
+	\resizebox{0.5\textwidth}{!}{
+		\begin{tabular}{llllll}
+			\toprule
+			\makecell[c]{type} & \makecell[c]{data-rate\\ bit/s} & \makecell[c]{netwerktype } & \makecell[c]{vermogen\\ sleep\\W} & \makecell[c]{vermogen\\ transmit\\W}&  \makecell[c]{bereik\\m}\\ 
+			
+			\midrule
+			Bluetooth & 2M & \makecell[l]{Point-to-point,\\ Ster} & 1.5m & 50m & 100 \\
+			BLE 	& 1M & \makecell[l]{Ster,\\ Mesh} & 6u & 15m & 100 \\
+			Wi-Fi 	& 10-100M & \makecell[l]{Point-to-point,\\ Ster}  & 10u & 350m & 100 \\
+			ZigBee  & 20k & \makecell[l]{Mesh}  & 5u & 75m & 50 \\
+			nRF24   & 1-2M & Ster, Mesh & 3u & 25m & 800 \\
+			LoRa 	& 0.3-20k & Ster & 165n & 100m & 5k \\
+			Infared & 1-4M & Point-to-point & 0.66u & 400m & 1 \\			
+			\bottomrule
+	\end{tabular} }
+\end{table}
+
+Voor het systeem gaan we er vanuit dat een datapakket vanuit de Wisb naar de biocontroller 64 bytes is. Het systeem moet een keer per seconden de mogelijkheid hebben om een meting kunnen uitvoeren en te versturen naar de biocontroller. Er wordt mogelijk een bericht vanuit de biocontroller terug gestuurd naar de Wisb bij het ontvangen van een goedgekeurd bericht, voor dit bericht rekenen we met 32 bytes.
+
+Per seconden wordt er een meting gedaan waarbij er 640 bits verstuurd worden naar en van de biocontroller. Vanuit een transceiver op de biocontroller moeten meerdere sensoren gekoppeld kunnen worden die de zelfde datarate van 640bits/s hebben. Voor het bepalen van de benodigde datarate wordt er aangenomen dat het er 6 sensoren met de transceiver gekoppeld kunnen worden, dit is de maximale hoeveelheid sensoren die op de topplate van de 3 liter bioreactior geplaatst kunnen worden. Omdat een er met RF en IrDa maar een module per keer uitgelezen kan worden is er een datarate nodig van minimaal 3.9 kbits/s. Mochten er meerdere modules per keer "praten" zal het signaal niet uitgelezen kunnen worden door de receiver.
+
+\begin{table}[H]
+	\centering
+	\caption{Wireless module afwegingstabel}
+	\label{tab:wisb_mod_wens}
+	\resizebox{0.5\textwidth}{!}{
+		\begin{tabular}{llll}
+			\toprule
+			\makecell[c]{data-rate\\ bit/s} & \makecell[c]{netwerktype } & \makecell[c]{vermogen\\ W} & \makecell[c]{bereik\\m}\\ 
+	
+			\midrule
+			4.0k & \makecell[l]{Ster, Mesh} & 1 & 10 \\			
+			\bottomrule
+	\end{tabular} }
+\end{table}
+
+Bluetooth -> verbruik te hoog onnodig hoog datarate
+
+BLE -> niks aan op te merken
+
+Wi-Fi -> te hoog verbruik onnodig hoge datarate niet gemaakt voor low power lastiger te implementeren.
+
+ZigBee -> te grote module, smartcable moet uiteindelijk weer compact gemaakt kunnen worden. De grote van de ZigBee modules is een beperking daarvoor. 
+
+nRF24 -> prima
+
+LoRa -> je mag per device maar 1\% van de tijd aan staan met een datarate van 10kbit/s kan er dus 100bit/s verstuurd worden per device moet er 640bits/s verstuurd kunnen worden.
+
+infared ->Aangezien Infra-red niet geschrikt is voor communicatie op de benodigde afstand en het feit dat het in line-of-sight moet staan wordt deze optie niet gebruikt voor dit project. 
+
+
+Net als bij elke manieren van draadloze communicatie zijn enkele nadelen aan Bluetooth. Het eerste benoemings-waardig punt is dat het batterijvermogen van het systeem afneemt. De technologie in Bluetooth is in de afgelopen jaren sterk verbeterd om het low power te maken. Naarmate de technologie (en batterijtechnologie) verder verbeterd zal het probleem van battery-drain minder groot worden.
+
+Naast het verbruik van de een Bluetooth module is het bereik van de methode vrij beperkt, meestal is dit rond de 10 meter. Het bereik wordt ook nadelig beïnvloed door obstakels zoals muren, objecten, vloeren of plafonds.
+
+\subsection{RF Channel Frequency}
+
+Een zendontvangermodule zendt en ontvangt gegevens op een bepaalde frequentie die Channel wordt genoemd. Om twee of meer zendontvangermodules met elkaar te laten communiceren, moeten ze zich ook op hetzelfde kanaal bevinden. Dit kanaal kan elke frequentie in de 2,4 GHz ISM-band zijn of om preciezer te zijn, het kan tussen 2.400 en 2.525 GHz zijn.
+
+Een kanaal van nRF24 neemt een bandbreedte van minder dan 1 MHz in beslag. Dit geeft ons 125 mogelijke kanalen met een tussenruimte van 1 MHz
+
+Voor een BLE is de bandbreedte rond de 2 MHZ, dit geeft de mogelijkheid voor 62 kanalen.
+
+
+

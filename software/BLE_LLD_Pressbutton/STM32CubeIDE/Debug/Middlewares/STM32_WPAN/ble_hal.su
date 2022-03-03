@@ -1,0 +1,6 @@
+ble_hal.c:53:9:HAL_BLE_LLD_Init	16	static
+ble_hal.c:68:9:HAL_BLE_LLD_Configure	16	static
+ble_hal.c:95:9:HAL_BLE_LLD_SendPacket	32	static
+ble_hal.c:130:9:HAL_BLE_LLD_SendPacketWithAck	32	static
+ble_hal.c:175:9:HAL_BLE_LLD_ReceivePacket	24	static
+ble_hal.c:208:9:HAL_BLE_LLD_ReceivePacketWithAck	32	static

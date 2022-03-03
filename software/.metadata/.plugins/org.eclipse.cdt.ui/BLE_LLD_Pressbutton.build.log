@@ -1,0 +1,10 @@
+16:53:33 **** Incremental Build of configuration Debug for project BLE_LLD_Pressbutton ****
+make -j8 all 
+arm-none-eabi-size   BLE_LLD_Pressbutton.elf 
+   text	   data	    bss	    dec	    hex	filename
+  42084	    169	  17945	  60198	   eb26	BLE_LLD_Pressbutton.elf
+Finished building: default.size.stdout
+ 
+
+16:53:33 Build Finished. 0 errors, 0 warnings. (took 492ms)
+
