@@ -1,0 +1,17 @@
+* C:\Users\moatjon\Documents\applikon-sb\software\simulatie\3orde_butterworth_hp.asc
+V§AC1 2V5 0 SINE(1 1 1M) AC AC 1
+V2 3V3 0 3.3
+XU2 N003 N002 3V3 0 N002 LTC6241
+R3 0 N003 220k
+R4 N001 N002 220k
+C2 N003 N001 10n
+C3 N001 2V5 10n
+R5 0 Vout 220k
+C1 Vout N002 10n
+.ac dec 1000 100m 100Meg
+* Second Order
+* First Order
+* Third Order
+.lib LTC4.lib
+.backanno
+.end

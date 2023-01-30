@@ -1,9 +1,19 @@
 \section{Telemetriesysteem}
 Om draadloos te kunnen communiceren tussen de bioreactor en de biocontroller is een telemetriesysteem nodig. Om te kunnen bepalen welke technologie het beste past voor het project is er onderzoek gedaan naar de verschillende manieren van draadloze communicatie.
 
-Het telemetriesysteem wordt gere-integreerd in de DO probe om data te kunnen versturen naar een transceiver in de biocontroller. De twee systemen bevinden zicht, in een doorsnede opstelling, in een straal 10 meter van elkaar vandaan. De biocontrollen wordt voorzien van een transceiver module die de data kan ontvangen van meerdere probes. In een bioreactor kunnen meerdere sensoren worden geplaatst zoals pH, temperatuur en dO. Het is de bedoeling dat zodra de dO probe betrouwbaar en veilig draadloos zijn data kan versturen gevoed op een batterij dat dit ook wordt gedaan bij andere sensoren voor de bioreactor. De afstand tussen de sensoren is een paar centimeter. Ook moet er rekening gehouden worden er een bepaalde datarate. Tijdens het onderzoek zal met boven genoemde punten rekening gehouden worden voor het bepalen van de beste communicatie methode. 
+Het telemetriesysteem wordt geïntegreerd in de DO probe om data te kunnen versturen naar een transceiver in de biocontroller. De twee systemen bevinden zicht, in een doorsnede opstelling, in een straal 10 meter van elkaar vandaan en de afstand tussen de sensoren is ongeveer 2 centimeter. Ook moet er rekening gehouden worden met de datarate waarmee de sensoren maximaal mee gaan werken. In een lab kamer kunnen meerdere bioreactors en-controllers aanwezig zijn. Er moet rekening gehouden worden dat er sensoren op het zelfde moment een datapakket kunnen versturen. 
+De biocontrollen wordt voorzien van een transceiver module die de data kan ontvangen van meerdere probes. In een 3L bioreactor kunnen zes sensoren worden geplaatst zoals pH, temperatuur en DO. Tijdens de proof of concept wordt er gebruik gemaakt van de DO probe, zodra er met de DO probe betrouwbaar en veilig draadloos data verstuurd kan worden gevoed op een batterij zullen de andere sensoren ook worden voorzien van draadloze communicatie. 
 
-De hoeveelheid stroom die wordt verbruikt, die sterk afhankelijk is van het bereik en de zuiverheid van de gegevensuitwisseling, is een belangrijk aandachtspunt geweest voor hardwareontwerpers om op rootniveau in hun ontwerpen op te nemen.
+Als aan de probe is gesteld dat het 28 dagen aan moet kunnen staan op een batterij. HEt is daarom belangrijk dat het systeem wordt ontworpen met ontwerp criteria low power
+
+Tijdens het onderzoek zal met boven genoemde punten rekening gehouden worden voor het bepalen van de beste communicatie methode. 
+
+\subsection{Radio technology}
+Ultra-wideband:  a radio technology that can use a very low energy level for short-range, high-bandwidth communications over a large portion of the radio spectrum
+
+broadband: is wide bandwidth data transmission which transports multiple signals at a wide range of frequencies and Internet traffic types, that enables messages to be sent simultaneously, used in fast internet connections.
+
+narrowband: a narrowband channel is a channel in which the bandwidth of the message does not significantly exceed the channel's coherence bandwidth. 
 
 \subsection{Bluetooth / Bluetooth low energy}
 Bluetooth is een methode om draadloos gegevens uit te wisselen tussen twee of meer apparaten, dit gebeurt met radiogolven bij een frequentie tussen 2.4GHz en 2.483GHz. Deze frequentie-band is een de frequenties die internationaal worden gebruikt voor de in de industrie, scientific en medische systemen(ISM). Aan de hand van dit netwerk kan er in een straal van 10-50 meter gecommuniceerd worden tussen systemen die mee doen in het netwerk. Voor Bluetooth wordt er gebruik gemaakt van IEEE 802.15.1 protocol waar een netwerk kan bestaan uit een Personal Area Network(PAN) of een Piconet. Bij een Piconet netwerk kan zijn er minimaal twee en maximaal acht bluetooth apparaten aanwezig. Elk apparaat biedt een uniek 48-bits adres van de IEEE 802-standaard(Institute of Electrical and Electronic Engineers), waarbij er een point-to-point of multipoint verbinding tot stand wordt gebracht.\cite{wireless_types}

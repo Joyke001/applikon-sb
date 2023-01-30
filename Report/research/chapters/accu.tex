@@ -1,6 +1,40 @@
 \section{Energie verbruik}
-Systemen die werken op batterijen hebben een beperkte tijdsduur en wordt verwacht dat ze worden opgeladen of vervangen zodra ze geen energie meer bevatten. Het streven is om de DO-sensor 28 dagen op een batterij te laten werken. Om dit te kunnen realiseren moet het systeem low power worden gemaakt, waarbij rekening gehouden wordt dat de DO-sensor zelf altijd van spanning voorzien is.
+Systemen die werken op batterijen hebben een beperkte tijdsduur en wordt verwacht dat de accu worden opgeladen of vervangen zodra ze geen energie meer bevatten. Het streven is om de DO-sensor 28 dagen op een batterij te laten werken, dit is de gemiddelde duur van een test. Om de 28 dagen te kunnen realiseren moet het systeem low power worden gemaakt, waarbij rekening gehouden wordt dat de DO-sensor zelf altijd van spanning voorzien is.
 
+Mocht het onderzoek langer dan 28 dagen duren en het is niet gewenst om tijdens de test de accu te vervangen kan er een optie worden gemaakt om het aan de hand van een kabel te communiceren met de biocontroller of de accu oplaadbaar te maken waarbij de test niet onderbroken hoeft te worden. 
+
+In tabel \ref{tab:battery_comp} worden vier eenheden met elkaar vergeleken om te kunnen bepalen welke accu geschikt is voor de AGV. Per accu wordt er gekeken naar het vermogen, het vermogen per kilogram, het vermogen met liter en vermogen per euro. 
+
+\begin{table}[H]
+	\centering
+	\caption{Accu vergelijking}
+	\label{tab:battery_comp}
+	\resizebox{0.5\textwidth}{!}{
+	\begin{tabular}{llllll}
+		\toprule
+		& Wh & Wh/kg & Wh/L & Wh/\euro & note\\ 
+		\midrule
+		LifePo4 & 5.4 & 129.5 & 160.4 & 2.4 & 18650\cite{lifepo4} \\
+		NIMH & 3 & 112.2 & 184.9 & 0.75 & AA \cite{nimh} \\
+		Li-Ion 1 & 4.7 & 180.0 & 226.1 & 0.7 & 18350 protected\cite{li_ion_18350} \\
+		Li-Ion 2 & 12.1 & 285.8 & 357.1 & 4.1 & 18650 not protected\cite{li_ion_18650} \\
+		NiZn & 2.4 & 92.3 & 148.0 & 0.6 & AA \cite{nizn} \\
+		\bottomrule
+	\end{tabular} 	}
+\end{table}
+
+In het overzicht is te dat de lithium-ionbatterijen (Li-ion) het meeste vermogen bevatten per kilogram en per liter. 
+Merk op dat in tabel \ref{tab:battery_comp} twee Li-Ion batterijen met elkaar worden vergeleken. De eerste is een Li-ion batterij met een ingebouwd beveiligingscircuit en de tweede zonder. 
+
+Beschermde Li-ion hebben een klein elektronisch circuit dat in de batterij celverpakking is geïntegreerd. Dit circuit beschermt de batterij tegen veelvoorkomende fouten en gevaren, zoals overladen, overontlading, kortsluiting/overstroom en temperatuur. Door het beveiligingscircuit in de Li-ion batterijen zullen ze minder snel ontbranden en persoonlijke of materiële schade veroorzaken.
+
+Door het beveiligingcircuit zijn de batterijen wel duurder dan de Li-ion batterijen zonder beveiliging en bevat het minder vermogen per liter. 
+
+Naast dat Li-Ion 2 per gewicht en inhoud het meeste vermogen bevat is het ook en van de goedkoopste. Bij Lead-acid krijg je het meeste vermogen voor je geld, het nadeel is echter dat het een erg zware en grootte accu is.
+
+
+
+In het power budget, tabel \ref{tab:power_budget_sb}, is het verbruik weergegeven van de huidige smartcable. Voor dit ontwerp was het verbruik van het systeem geen ontwerp criterium, omdat het gevoed wordt vanuit de biocontroller die is aangesloten op het lichtnet. 
 
 \begin{table}[H]
 	\centering
@@ -28,9 +62,10 @@ Systemen die werken op batterijen hebben een beperkte tijdsduur en wordt verwach
 	\end{tabular} }
 \end{table}
 
-In het power budget, tabel \ref{tab:power_budget_sb}, is het verbruik weergegeven van de huidige smartcable. Voor dit ontwerp was het verbruik van het systeem geen ontwerp criteria, omdat het gevoed wordt vanuit de biocontroller die is aangesloten op het lichtnet. De smartcable bevat verschillende componenten die veel energie verbruiken voor een systeem dat moet gaan werken op een batterij. 
+Zie in het power budget van de smartcabel dat er een aantal componenten zijn die in verhouding tot de rest veel energie verbruiken. 
 
-Voor het draadloze smartcable ontwerp worden de componenten onder de loep genomen om het verbruik omlaag te brengen. 
+
+De smartcable bevat verschillende componenten die veel energie verbruiken voor een systeem dat moet gaan werken op een batterij. Voor het draadloze smartcable ontwerp worden de componenten onder de loep genomen om het verbruik omlaag te brengen. 
 
 In het power budget zijn er drie componenten waarvan het verbruik ver boven de rest ligt. De componeneten waarover gesproken wordt zijn: de RGB-Leds, de microcontroller en de opamps. Het eerste component dat aangepast zal worden zijn de RGB-led's. Het systeem wordt voorzien van low power led's inplaats van twee RGB-led. 
 

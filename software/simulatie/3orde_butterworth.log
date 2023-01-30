@@ -1,4 +1,4 @@
-Circuit: * C:\Users\moatjon\Documents\applikon\software\simulatie\3orde_butterworth.asc
+Circuit: * C:\Users\moatjon\Documents\applikon-sb\software\simulatie\3orde_butterworth.asc
 
 Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
 Starting Gmin stepping
@@ -95,8 +95,8 @@ Gmin = 0
 Gmin stepping succeeded in finding the operating point.
 
 
-Date: Tue Mar 01 16:10:54 2022
-Total elapsed time: 0.098 seconds.
+Date: Tue Mar 08 10:17:30 2022
+Total elapsed time: 0.150 seconds.
 
 tnom = 27
 temp = 27
@@ -110,5 +110,5 @@ matrix size = 19
 fillins = 12
 solver = Normal
 Matrix Compiler1:      72 opcodes
-Matrix Compiler2: off  [0.1]/0.2/0.4
+Matrix Compiler2: off  [0.1]/0.2/0.2
 
